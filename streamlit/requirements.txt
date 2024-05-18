@@ -1,0 +1,27 @@
+grpcio==1.60.0
+grpcio-tools==1.60.0
+PyPDF2==3.0.1
+langchain==0.1.3
+sentence-transformers==2.2.2
+qdrant-client==1.7.1
+moviepy==1.0.3
+torch>=2.2.0
+torchaudio>=2.2.0
+faster-whisper @ git+https://github.com/SYSTRAN/faster-whisper.git
+transformers==4.37.1
+pandas==2.1.4
+setuptools>=65
+nltk==3.8.1
+kiwi==9.25.22
+streamlit==1.31.1
+streamlit-drawable-canvas==0.9.3
+streamlit-option-menu==0.3.6
+streamlit-vis-timeline==0.3.0
+opencv-python==4.8.1.78
+easyocr==1.7.1
+kiwipiepy==0.16.2
+fastapi==0.110.0
+uvicorn==0.27.1
+python-multipart==0.0.9
+openai==1.13.3
+whisperx==3.1.2
