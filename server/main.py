@@ -205,6 +205,17 @@ def ch1(choice_str: str = Form(...)):
     except Exception as e:
         raise HTTPException(status_code=500, detail="Failed to insert document into MongoDB")
 
+@app.post("/inference/page2")
+def v(prompt: str = Form(...),index: int =Form(...)):
+    try:
+        prompt = list(choice_collection.find({"page": 1}, {"_id": 0}))
+        choices = [item['choice'] for item in prompt]
+        p = choices[0]
+        sys = f"해결 방안 {p}이 좋을 것 같은데, 이것을 내가 제품 개발에 실제로 적용하려면 어떤 과정을 거쳐야 할까?"
+        #sys_prompt = system_prompt + sys
+        process(system_prompt,p,index,page=2)
+    except:
+        raise HTTPException(status_code=500, detail="Failed to insert document into MongoDB")
 
 
 def process(system_prompt,prompt, index,page):
